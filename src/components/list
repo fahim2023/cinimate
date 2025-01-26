@@ -1,0 +1,11 @@
+api key = 81d83e663f05e2c421643f278ba1cdf7
+
+access token: eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MWQ4M2U2NjNmMDVlMmM0MjE2NDNmMjc4YmExY2RmNyIsIm5iZiI6MTY4MDk2NDA0OC44MDQsInN1YiI6IjY0MzE3OWQwMzEwMzI1MDEwMzZlZTNhMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Dw0MpZ6n5-SpnXHoXFZqOt8tTRhn-5zX608NXzwK1G0
+
+base url: https://api.themoviedb.org/3/
+
+findmovie??: https://api.themoviedb.org/3/discover/movie
+ top rated: https://api.themoviedb.org/3/tv/top_rated?language=en-US
+ popular: https://api.themoviedb.org/3/movie/popular?language=en-US
+ upcoming: https://api.themoviedb.org/3/movie/upcoming?language=en-US
+ search:  upcoming: https://api.themoviedb.org/3/movie/search?language=en-US
