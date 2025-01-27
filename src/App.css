@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+main {
+  height: auto;
+  min-height: 90vh;
+  padding: 10px;
+}
