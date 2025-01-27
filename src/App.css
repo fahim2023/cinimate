@@ -1,8 +1,0 @@
-@import "tailwindcss";
-main {
-  max-width: 1280px;
-  height: auto;
-  min-height: 90vh;
-  padding: 10px;
-}
-@custom-variant dark (&:where(.dark, .dark *));
