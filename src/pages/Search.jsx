@@ -1,7 +1,11 @@
-import { Card } from "../components/Card";
-import { useFetch } from "../hookss/useFetch";
 import { useSearchParams } from "react-router";
+import { useFetch } from "../hookss/useFetch";
+import { useEffect } from "react";
+import { Card } from "../components/Card";
 export const Search = ({ apiPath }) => {
+  useEffect(() => {
+    document.title = `${queryTerm}`;
+  });
   const [searchParams] = useSearchParams();
   const queryTerm = searchParams.get("q");
 

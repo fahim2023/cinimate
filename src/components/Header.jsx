@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Logo from "../assets/logo.png";
 
 export function Header() {
@@ -18,11 +17,11 @@ export function Header() {
     if (!darkMode) document.documentElement.classList.add("dark");
   }, [darkMode]);
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    const queryTerm = e.target.search.value;
-    e.target.reset();
-    return navigate(`search/movie?q=${queryTerm}`);
+  function handleSubmit(event) {
+    event.preventDefault();
+    const queryTerm = event.target.search.value;
+    event.target.reset();
+    return navigate(`search/?q=${queryTerm}`);
   }
   const isActive =
     "text-lg block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500";
@@ -128,9 +127,8 @@ export function Header() {
                 </svg>
                 <span className="sr-only">Search icon</span>
               </div>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <input
-                  onSubmit={handleSubmit}
                   name="search"
                   type="text"
                   id="search-navbar"
@@ -189,9 +187,8 @@ export function Header() {
                   />
                 </svg>
               </div>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <input
-                  onSubmit={handleSubmit}
                   name="search"
                   type="text"
                   id="search-navbar"
